@@ -1,0 +1,11 @@
+copyright: Ulf Riebesell
+
+sourceNote: This site is open <a href="https://github.com/janosh/riebesell.science">source</a>
+
+poweredBy:
+  - url: https://www.gatsbyjs.org
+    title: Gatsby
+  - url: https://www.github.com/janosh/riebesell.science
+    title: Github
+  - url: https://www.netlify.com
+    title: Netlify
