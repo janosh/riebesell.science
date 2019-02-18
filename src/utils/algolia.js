@@ -22,15 +22,18 @@ const publicationQuery = `{
   pubs: allGoogleScholar {
     edges {
       node {
-        objectID: id
+        id
         title
         url
         authors {
           name
           url
         }
-        etAl
+        preEtAl
+        postEtAl
         abstract
+        year
+        journal
         pdfUrl
         citedByCount
         citedByUrl
