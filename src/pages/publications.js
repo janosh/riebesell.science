@@ -1,29 +1,62 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react"
+import { graphql } from "gatsby"
 
-import Global from '../components/Global'
-import PageTitle from '../components/PageTitle'
+import Global from "../components/Global"
+import PageTitle from "../components/PageTitle"
 
-const Contact = ({ location, data }) => (
+const PublicationsPage = ({ location, data }) => (
   <Global path={location.pathname}>
     <PageTitle>
       <h1>Publications</h1>
     </PageTitle>
     {data.pubs.edges.map(({ node }) => (
-      <div>
-        <a href={node.url}>
-          <h3>{node.title}</h3>
-        </a>
+      <div key={node.title}>
+        <h3>
+          <a href={node.url}>{node.title}</a>
+        </h3>
         <p>{node.abstract}</p>
-        {node.authors.map(({ name, url }) =>
-          url ? <a href={url}>{name}</a> : name
-        )}
+        <p>
+          {node.preEtAl && <span>..., </span>}
+          {node.authors.map((author, index) => (
+            <span key={author.name}>
+              {!!index && `, `}
+              {author.url ? (
+                <a href={author.url}>{author.name}</a>
+              ) : (
+                author.name
+              )}
+            </span>
+          ))}
+          {node.postEtAl && <span>, ...</span>}
+        </p>
+        <p>
+          {node.pdfUrl && (
+            <a href={node.pdfUrl} style={{ marginRight: `1em` }}>
+              PDF
+            </a>
+          )}
+          <span style={{ marginRight: `1em` }}>{node.year}</span>
+          {node.journal && (
+            <span style={{ marginRight: `1em` }}>{node.journal}</span>
+          )}
+          <a href={node.citedByUrl} style={{ marginRight: `1em` }}>
+            Cited by {node.citedByCount}
+          </a>
+          <a href={node.relatedUrl} style={{ marginRight: `1em` }}>
+            Related papers
+          </a>
+          {node.allVersionsUrl && (
+            <a href={node.allVersionsUrl} style={{ marginRight: `1em` }}>
+              All versions
+            </a>
+          )}
+        </p>
       </div>
     ))}
   </Global>
 )
 
-export default Contact
+export default PublicationsPage
 
 export const query = graphql`
   {
@@ -37,8 +70,11 @@ export const query = graphql`
             name
             url
           }
-          etAl
+          preEtAl
+          postEtAl
           abstract
+          year
+          journal
           pdfUrl
           citedByCount
           citedByUrl
