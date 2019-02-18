@@ -5,6 +5,7 @@ import {
   Hits,
   connectStateResults,
 } from 'react-instantsearch-dom'
+import algoliasearch from 'algoliasearch/lite'
 import { Algolia } from 'styled-icons/fa-brands/Algolia'
 
 import { Root, HitsWrapper, By } from './styles'
@@ -25,6 +26,10 @@ const Stats = connectStateResults(
 
 export default class Search extends Component {
   state = { query: ``, focussed: false, ref: createRef() }
+  searchClient = algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  )
 
   updateState = state => this.setState(state)
 
@@ -59,8 +64,7 @@ export default class Search extends Component {
     const { indices, collapse, hitsAsGrid } = this.props
     return (
       <InstantSearch
-        appId="ZOE4SGQ9EG"
-        apiKey="14dedbd0f24d124cf32c1c9f9ff3df61"
+        searchClient={this.searchClient}
         indexName={indices[0].name}
         onSearchStateChange={this.updateState}
         root={{ Root, props: { ref } }}
