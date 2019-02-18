@@ -44,14 +44,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GATrackingId,
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: process.env.algoliaAppId,
-        apiKey: process.env.algoliaAdminKey,
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
         queries,
         chunkSize: 10000, // default: 1000
       },
@@ -66,7 +66,7 @@ module.exports = {
     {
       resolve: `gatsby-source-google-scholar`,
       options: {
-        query: `albert einstein`,
+        queries: [`ulf riebesell`],
       },
     },
   ],
