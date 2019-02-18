@@ -52,5 +52,9 @@
     "gatsby",
     "algolia",
     "styled-components"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^5.14.0",
+    "eslint-plugin-react": "^7.12.4"
+  }
 }
