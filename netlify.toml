@@ -1,0 +1,11 @@
+[build]
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "14.4.0"
+  YARN_VERSION = "1.22.4"
+
+[[redirects]]
+  from = "https://riebesell.netlify.com/*"
+  to = "https://riebesell.science/:splat"
+  force = true

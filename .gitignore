@@ -1,0 +1,12 @@
+# dependencies
+node_modules
+
+# builds
+.cache
+public
+
+# deploy config
+.netlify
+
+# environment variables
+.env*
