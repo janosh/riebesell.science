@@ -17,6 +17,6 @@ export const HeaderDiv = styled.header`
   align-items: center;
   justify-items: center;
   justify-content: center;
-  padding: 2vmin 3vmin 0;
-  font-size: 1.3em;
+  padding: 1em 1em 0;
+  font-size: 1.2em;
 `

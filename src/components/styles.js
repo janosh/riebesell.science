@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { mediaQueries } from 'utils/mediaQueries'
 
 export const fadeInOnHoverParent = parent => css`
   opacity: 0;
@@ -26,21 +27,39 @@ export const Grid = styled.div`
 export const Portrait = styled.address`
   display: grid;
   font-style: normal;
-  grid-template-areas:
-    'img text'
-    'img text'
-    'img text';
-  align-content: start;
+  ${mediaQueries.maxPhablet} {
+    text-align: center;
+    justify-items: center;
+  }
+  ${mediaQueries.minPhablet} {
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
   grid-gap: 0 2em;
-  margin-bottom: 5em;
+  margin-bottom: 4em;
+  h1,
+  h3 {
+    margin-top: 1em;
+  }
   h2 {
     margin: 0;
     font-weight: lighter;
   }
-  p:first-child {
-    grid-area: img;
-    margin: 0;
+  > p:first-child {
     border-radius: 50%;
     overflow: hidden;
+    width: 10em;
+    height: 10em;
   }
+`
+
+export const H1 = styled.h1`
+  width: max-content;
+  padding: 0.3em 0.6em;
+  margin: 1em auto 0.5em;
+  font-size: 4em;
+  position: relative;
+  color: var(--color-green-light);
+  border-bottom: 2px solid var(--color-orange-default);
 `
