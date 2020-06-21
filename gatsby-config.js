@@ -15,6 +15,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-mdx`,
     options: {
+      extensions: [`.mdx`, `.md`],
       gatsbyRemarkPlugins: [
         `gatsby-remark-copy-linked-files`,
         {

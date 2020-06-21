@@ -1,13 +1,11 @@
 ---
-title: Projects
-slug: /projects
+title: Ocean artUp
+url: https://ocean-artup.eu
+logo: logo.svg
+banner: banner.jpg
 ---
 
-## [Ocean artUp](https://ocean-artup.eu)
-
 Ocean artUp is a research project funded through an Advanced Grant of the European Research Council that explores the possible benefits of artificially-induced uplift of nutrient-rich deep water to the ocean’s sunlit surface layer.
-
-[![Ocean artUp](ocean-artup.png)](https://ocean-artup.eu)
 
 ### Vision
 
