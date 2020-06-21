@@ -46,6 +46,7 @@ const plugins = [
   },
   `gatsby-plugin-offline`,
   `gatsby-transformer-yaml`,
+  `gatsby-transformer-csv`,
   `gatsby-plugin-catch-links`,
   `gatsby-plugin-styled-components`,
   {
