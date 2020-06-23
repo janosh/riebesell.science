@@ -16,11 +16,11 @@ export default function Social({ size = `1.5em` }) {
   `)
   return (
     <Div>
-      {social.nodes.map(service => {
-        const Icon = Icons[service.title]
+      {social.nodes.map(({ title, url }) => {
+        const Icon = Icons[title]
         if (!Icon) return null
         return (
-          <a key={service.title} href={service.url}>
+          <a key={title} href={url} aria-label={title}>
             <Icon size={size} />
           </a>
         )

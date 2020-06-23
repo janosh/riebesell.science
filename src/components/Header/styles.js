@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 export const Logo = props => (
   <Link {...props}>
-    <img src={svg} height="80" />
+    <img src={svg} alt="site logo" height="80" />
   </Link>
 )
 

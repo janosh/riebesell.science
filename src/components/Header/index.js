@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HeaderDiv, Logo } from './styles'
 import Nav from '../Nav'
 import Search from '../Search'
@@ -12,9 +11,7 @@ const searchIndices = [{ name: `Pages`, title: `Pages`, hitComp: `PageHit` }]
 const Header = ({ site }) => (
   <>
     <HeaderDiv>
-      <Logo to="/" title={site.title} rel="home">
-        UR
-      </Logo>
+      <Logo to="/" title={site.title} rel="home" />
       <Nav />
       <Grid flow="column">
         <Search indices={searchIndices} size="1.1em" />

@@ -10,15 +10,17 @@ export const Div = styled.div`
   justify-content: center;
   grid-area: social;
   grid-auto-flow: column;
-  grid-gap: 1.5em;
+  grid-gap: 1em;
   align-items: end;
   grid-auto-columns: max-content;
+  > * {
+    padding: 0.3em;
+  }
 `
 
 export const Icons = {
   Email: styled(Email)`
-    vertical-align: -0.2em;
-    transform: scale(1.1);
+    transform: scale(1.1, 1.2);
   `,
   LinkedIn,
   ResearchGate: Researchgate,
