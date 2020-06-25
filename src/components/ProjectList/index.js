@@ -15,7 +15,7 @@ export function ProjectList(props) {
             title
             url
             logo {
-              src: publicURL
+              src: dataURI
             }
             banner {
               sharp: childImageSharp {
