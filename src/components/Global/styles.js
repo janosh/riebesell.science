@@ -12,8 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${fonts};
     font-size: ${minFontSize}em;
     line-height: ${minLineHeight}em;
-    /* Fix very large font size in code blocks in iOS Safari (https://stackoverflow.com/a/3428477). */
-    -webkit-text-size-adjust: 100%;
     ${mediaQueries.minPhone} {
       font-size: calc(${minFontSize}em + (${maxFontSize} - ${minFontSize}) * ((100vw - ${phone}em) / (${desktop} - ${phone})));
       line-height: calc(${minLineHeight}em + (${maxLineHeight} - ${minLineHeight}) * ((100vw - ${phone}em) / (${desktop} - ${phone})));
@@ -41,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   h1, h2, h3, h4, h5, h6 {
     line-height: initial;
+    margin-top: 2.5em;
+    svg {
+      color: var(--color-c);
+    }
   }
   blockquote, details {
     border-left: 0.25em solid var(--color-link);
