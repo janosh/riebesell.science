@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import mediaQuery from 'utils/mediaQuery'
+import { mediaQueries } from 'utils/mediaQueries'
 
 export const FooterDiv = styled.footer`
   background: var(--color-blue-dark);
@@ -16,7 +16,7 @@ export const FooterDiv = styled.footer`
   justify-content: space-around;
   align-items: center;
   gap: 1em;
-  ${mediaQuery.maxPhone} {
+  ${mediaQueries.maxPhone} {
     flex-direction: column;
   }
 `
