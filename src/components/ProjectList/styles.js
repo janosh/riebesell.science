@@ -19,8 +19,7 @@ export const Thumbnail = styled.div`
     font-size: 2.4em;
     position: absolute;
     color: white;
-    align-self: center;
-    justify-self: center;
+    place-self: center;
     background: rgba(0, 0, 0, 0.8);
     padding: 0.4em 0.6em;
     text-align: center;

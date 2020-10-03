@@ -14,9 +14,7 @@ export const HeaderDiv = styled.header`
   background: var(--color-blue-dark);
   color: white;
   grid-gap: 3vw;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
+  place-items: center;
   padding: 1em 1em 0;
   font-size: 1.2em;
 `

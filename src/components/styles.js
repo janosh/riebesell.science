@@ -34,7 +34,6 @@ export const Portrait = styled.address`
   ${mediaQueries.minPhablet} {
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;
-    align-items: center;
   }
   grid-gap: 0 2em;
   margin-bottom: 4em;

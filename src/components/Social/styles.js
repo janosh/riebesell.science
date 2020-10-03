@@ -8,11 +8,8 @@ export const Div = styled.div`
   color: var(--color-text);
   display: grid;
   justify-content: center;
-  grid-area: social;
   grid-auto-flow: column;
   grid-gap: 1em;
-  align-items: end;
-  grid-auto-columns: max-content;
   > * {
     padding: 0.3em;
   }

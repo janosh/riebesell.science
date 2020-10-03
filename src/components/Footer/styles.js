@@ -15,8 +15,8 @@ export const FooterDiv = styled.footer`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 1em;
-  ${mediaQueries.maxPhone} {
+  gap: 2em 1em;
+  ${mediaQueries.maxTablet} {
     flex-direction: column;
   }
 `
