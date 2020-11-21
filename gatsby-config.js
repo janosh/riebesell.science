@@ -45,7 +45,6 @@ const plugins = [
       theme_color: `#150956`,
     },
   },
-  `gatsby-plugin-offline`,
   `gatsby-transformer-yaml`,
   `gatsby-transformer-csv`,
   `gatsby-plugin-catch-links`,
